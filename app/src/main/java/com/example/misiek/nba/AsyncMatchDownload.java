@@ -29,10 +29,12 @@ public class AsyncMatchDownload extends AsyncTask<String, Integer, ArrayList<Mat
                     JSONObject vTeam = match.getJSONObject("vTeam");
                     int awayTeamId = vTeam.getInt("teamId");
                     int awayTeamScore = vTeam.getInt("score");
+                    String awayTeamTriCode = vTeam.getString("triCode");
                     JSONObject hTeam = match.getJSONObject("hTeam");
                     int homeTeamId = hTeam.getInt("teamId");
                     int homeTeamScore = hTeam.getInt("score");
-                    Match t = new Match(gameId, homeTeamId, homeTeamScore, awayTeamId, awayTeamScore);
+                    String homeTeamTriCode = hTeam.getString("triCode");
+                    Match t = new Match(gameId, homeTeamId, homeTeamScore, homeTeamTriCode,awayTeamId, awayTeamScore, awayTeamTriCode);
                     listOfMatches.add(t);
                 }
             } catch (IOException e) {

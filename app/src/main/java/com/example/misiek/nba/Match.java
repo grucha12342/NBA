@@ -4,15 +4,35 @@ public class Match {
     int gameId;
     int homeTeamId;
     int homeTeamScore;
+    String homeTeamTriCode;
     int awayTeamId;
     int awayTeamScore;
+    String awayTeamTriCode;
 
-    public Match(int gameId, int homeTeamId, int homeTeamScore, int awayTeamId, int awayTeamScore) {
+    public Match(int gameId, int homeTeamId, int homeTeamScore, String homeTeamTriCode, int awayTeamId, int awayTeamScore, String awayTeamTriCode) {
         this.gameId = gameId;
         this.homeTeamId = homeTeamId;
         this.homeTeamScore = homeTeamScore;
+        this.homeTeamTriCode = homeTeamTriCode;
         this.awayTeamId = awayTeamId;
         this.awayTeamScore = awayTeamScore;
+        this.awayTeamTriCode = awayTeamTriCode;
+    }
+
+    public String getHomeTeamTriCode() {
+        return homeTeamTriCode;
+    }
+
+    public void setHomeTeamTriCode(String homeTeamTriCode) {
+        this.homeTeamTriCode = homeTeamTriCode;
+    }
+
+    public String getAwayTeamTriCode() {
+        return awayTeamTriCode;
+    }
+
+    public void setAwayTeamTriCode(String awayTeamTriCode) {
+        this.awayTeamTriCode = awayTeamTriCode;
     }
 
     public int getGameId() {

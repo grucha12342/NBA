@@ -39,9 +39,9 @@ public class MyAdapter extends ArrayAdapter<Match> {
         TextView valueHomeView = (TextView) rowView.findViewById(R.id.valueHome);
 
         // 4. Set the text for textView
-        labelAwayView.setText(itemsArrayList.get(position).getAwayTeamId()+"");
+        labelAwayView.setText(itemsArrayList.get(position).getAwayTeamTriCode());
         valueAwayView.setText(itemsArrayList.get(position).getAwayTeamScore()+"");
-        labelHomeView.setText(itemsArrayList.get(position).getHomeTeamId()+"");
+        labelHomeView.setText(itemsArrayList.get(position).getHomeTeamTriCode());
         valueHomeView.setText(itemsArrayList.get(position).getHomeTeamScore()+"");
 
         // 5. retrn rowView
